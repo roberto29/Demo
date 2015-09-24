@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Envio Correos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @envio_correos.each do |envio_correo| %>
+      <tr>
+        <td><%= link_to 'Show', envio_correo %></td>
+        <td><%= link_to 'Edit', edit_envio_correo_path(envio_correo) %></td>
+        <td><%= link_to 'Destroy', envio_correo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Envio correo', new_envio_correo_path %>
